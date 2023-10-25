@@ -56,6 +56,8 @@ contract Sign is ownerable {
     }
 
     function addMember(address who) public onlyOwner{
+        require(!_isMember(who),"only not member");
+
         member[who] = true;
         memberJoinTime[who] = block.timestamp;
         memberLen += 1;

@@ -2,7 +2,7 @@
 pragma solidity 0.8.19;
 
 contract ownerable {
-    address _owner;
+    address public _owner;
 
     constructor() {
         _owner = msg.sender;
@@ -18,5 +18,9 @@ contract ownerable {
     function transferOwner(address newOwner) public onlyOwner {
         _owner = newOwner;
         emit ownerTransfed(msg.sender, newOwner);
+    }
+
+    function owner() external view returns(address){
+        return _owner;
     }
 }
