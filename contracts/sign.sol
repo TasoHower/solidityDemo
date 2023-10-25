@@ -5,6 +5,9 @@ import "../Utils/owner.sol";
 
 /**
  * 注意：代码未经测试，请勿直接商用
+ * 
+ * Code by: Tasohower(https://github.com/TasoHower)
+ * 部署地址： https://goerli.etherscan.io/address/0x2e44930fa9d407e814dc774f5714c0db9097b26b#code（已开源）
  */
 contract Sign is ownerable {
     constructor() {
