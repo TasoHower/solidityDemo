@@ -15,7 +15,7 @@ contract ownerable {
 
     event ownerTransfed(address older, address newOwner);
 
-    function transferOwner(address newOwner) public onlyOwner {
+    function transferOwner(address newOwner) public virtual onlyOwner {
         _owner = newOwner;
         emit ownerTransfed(msg.sender, newOwner);
     }
