@@ -89,7 +89,8 @@ contract Sign is ownerable {
         uint256 _requireVotes,
         address to
     ) public payable onlyMember {
-        require(_requireVotes > 0);
+        require(_requireVotes > memberLen/2);
+        
         bytes32 random = keccak256(
             abi.encodePacked(msg.sender, _callData, block.timestamp)
         );
@@ -103,6 +104,7 @@ contract Sign is ownerable {
         newTP.requireVotes = _requireVotes;
         newTP.value = msg.value;
         newTP.to = to;
+        
 
         transferVoted[random][msg.sender] = true;
 

@@ -2,10 +2,6 @@
 pragma solidity 0.8.19;
 
 abstract contract ERC20Basic {
-    uint256 public _totalSupply;
-
-    function totalSupply() public view virtual returns (uint);
-
     function balanceOf(address who) public view virtual returns (uint);
 
     function transfer(address to, uint value) public virtual;
