@@ -8,6 +8,7 @@ import "../ERC/ERC20.sol";
 /**
  * SignV2 试图创建一个去中心化的交易投票合约
  * 合约投票来确认成员变更（全票通过）
+ * 测试部署于 Goerli 网络（0x4fac361e0d8d283c9aa2d1c2cfb785cb8a0bb780）
  */
 contract SignV2 is ownerable {
     using SafeMath for uint256;
